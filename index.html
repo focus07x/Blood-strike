@@ -1,1 +1,29 @@
-blood strike
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invite Booster</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+  <h2>📨 Invite Booster: เปิดลิงก์เชิญเพื่อนอัตโนมัติ (3 ไก่)</h2>
+  <input type="text" id="inviteLink" placeholder="วางลิงก์เชิญที่นี่" style="width: 300px; padding: 5px;">
+  <br><br>
+  <button onclick="simulateClicks()" style="padding: 10px 20px;">เปิดลิงก์ด้วย 3 ไก่</button>
+
+  <script>
+    function simulateClicks() {
+      const link = document.getElementById('inviteLink').value;
+      if (!link.includes('http')) {
+        alert("❌ กรุณาใส่ลิงก์เชิญให้ถูกต้อง!");
+        return;
+      }
+
+      for (let i = 1; i <= 3; i++) {
+        setTimeout(() => {
+          window.open(link + "?bot=" + i, "_blank");
+        }, i * 1500);
+      }
+    }
+  </script>
+</body>
+</html>
