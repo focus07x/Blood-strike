@@ -2,28 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Invite Booster</title>
+  <title>เล่นเกม</title>
+  <style>
+  
+    body {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+    }
+
+    .btn {
+      background-color: #00bcd4;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      border-radius: 50px;
+      transition: background-color 0.3s, transform 0.2s;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00bcd4;
+    }
+
+    .btn:hover {
+      background-color: #0097a7;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <h2>📨 ระบบกดลิงก์เชิญเพื่อน (3 ไอดีไก่)</h2>
-  <input type="text" id="inviteLink" placeholder="วางลิงก์เชิญที่นี่" style="width: 300px;">
-  <button onclick="simulateClicks()">กดลิงก์ด้วย 3 ไก่</button>
 
-  <script>
-    function simulateClicks() {
-      const link = document.getElementById('inviteLink').value;
-      if (!link.includes('http')) {
-        alert("❌ กรุณาใส่ลิงก์เชิญให้ถูกต้อง!");
-        return;
-      }
+  <h1>เล่นเกมกันพี่!!!</h1>
 
-      // เปิด 3 แท็บ / หน้าต่างแยก (แทน 3 ไอดีไก่)
-      for (let i = 1; i <= 3; i++) {
-        setTimeout(() => {
-          window.open(link + "?bot=" + i, "_blank");
-        }, i * 1500); // หน่วงเวลาเล็กน้อย
-      }
-    }
-  </script>
+  <a href="https://www.blood-strike.com/m/startgame/?wtf=eyJtb2RlIjogIlVzZVRlYW1JbnZpdGVDb2RlIiwgImNvZGUiOiAiQVkycU91aVpYaEVBVnRDSSIsICJub3ciOiAiMTc1Mjg1NjQ1NCJ9" class="btn">กดเข้าเกม</a>
+
 </body>
 </html>
